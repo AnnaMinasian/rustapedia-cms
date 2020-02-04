@@ -2,10 +2,11 @@ const { Keystone } = require('@keystonejs/keystone');
 const { GraphQLApp } = require('@keystonejs/app-graphql');
 const { AdminUIApp } = require('@keystonejs/app-admin-ui');
 const { MongooseAdapter: Adapter } = require('@keystonejs/adapter-mongoose');
+const { PasswordAuthStrategy } = require('@keystonejs/auth-password');
 const PROJECT_NAME = "rustapedia";
 const UsersSchema = require('./lists/Users.js');
 const ItemsSchema = require('./lists/Items.js');
-const { PasswordAuthStrategy } = require('@keystonejs/auth-password');
+const CategoriesSchema = require('./lists/Categories.js');
 
 /**
  * You've got a new KeystoneJS Project! Things you might want to do next:
@@ -20,6 +21,7 @@ const keystone = new Keystone({
 
 keystone.createList('User', UsersSchema);
 keystone.createList('Item', ItemsSchema);
+keystone.createList('Category', CategoriesSchema);
 
 const authStrategy = keystone.createAuthStrategy({
   type: PasswordAuthStrategy,
