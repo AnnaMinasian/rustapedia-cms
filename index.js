@@ -2,8 +2,9 @@ const { Keystone } = require('@keystonejs/keystone');
 const { GraphQLApp } = require('@keystonejs/app-graphql');
 const { AdminUIApp } = require('@keystonejs/app-admin-ui');
 const { MongooseAdapter: Adapter } = require('@keystonejs/adapter-mongoose');
-
 const PROJECT_NAME = "rustapedia";
+const UsersSchema = require('./lists/Users.js');
+const { PasswordAuthStrategy } = require('@keystonejs/auth-password');
 
 
 /**
@@ -17,7 +18,14 @@ const keystone = new Keystone({
   adapter: new Adapter(),
 });
 
+keystone.createList('User', UsersSchema);
+
+const authStrategy = keystone.createAuthStrategy({
+  type: PasswordAuthStrategy,
+  list: 'User',
+});
+
 module.exports = {
   keystone,
-  apps: [new GraphQLApp(), new AdminUIApp({ enableDefaultRoute: true })],
+  apps: [new GraphQLApp(), new AdminUIApp({ enableDefaultRoute: true, authStrategy })],
 };
