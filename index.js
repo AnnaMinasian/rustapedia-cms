@@ -16,6 +16,8 @@ const CraftSchema = require('./lists/Craft.js');
 const ItemCountSchema = require('./lists/ItemCount.js');
 const RepairSchema = require('./lists/Repair.js');
 const DurabilityInfoSchema = require('./lists/DurabilityInfo.js');
+const CookingInfoSchema = require('./lists/CookingInfo.js');
+const IngredientInfoSchema = require('./lists/IngredientInfo.js');
 
 /**
  * You've got a new KeystoneJS Project! Things you might want to do next:
@@ -39,6 +41,8 @@ keystone.createList('Craft', CraftSchema);
 keystone.createList('ItemCount', ItemCountSchema);
 keystone.createList('Repair', RepairSchema);
 keystone.createList('DurabilityInfo', DurabilityInfoSchema);
+keystone.createList('CookingInfo', CookingInfoSchema);
+keystone.createList('IngredientInfo', IngredientInfoSchema);
 /*
 const authStrategy = keystone.createAuthStrategy({
   type: PasswordAuthStrategy,

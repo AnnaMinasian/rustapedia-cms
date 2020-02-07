@@ -29,5 +29,6 @@ module.exports = {
     repairInfo: { type: Relationship, ref: 'Repair', many: true },
     recycleResult: { type: Relationship, ref: 'ItemCount', many: true },
     durability: { type: Relationship, ref: 'DurabilityInfo', many: true },
+    cooking: { type: Relationship, ref: 'CookingInfo', many: true },
     },
 };
