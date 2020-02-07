@@ -30,5 +30,6 @@ module.exports = {
     recycleResult: { type: Relationship, ref: 'ItemCount', many: true },
     durability: { type: Relationship, ref: 'DurabilityInfo', many: true },
     cooking: { type: Relationship, ref: 'CookingInfo', many: true },
+    gather: { type: Relationship, ref: 'GatheringInfo', many: true },
     },
 };
