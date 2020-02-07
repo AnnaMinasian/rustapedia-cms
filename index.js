@@ -2,6 +2,8 @@ const { Keystone } = require('@keystonejs/keystone');
 const { GraphQLApp } = require('@keystonejs/app-graphql');
 const { AdminUIApp } = require('@keystonejs/app-admin-ui');
 const { MongooseAdapter: Adapter } = require('@keystonejs/adapter-mongoose');
+require('dotenv').config();
+
 //const { PasswordAuthStrategy } = require('@keystonejs/auth-password');
 const PROJECT_NAME = "rustapedia";
 const UserSchema = require('./lists/User.js');
