@@ -1,9 +1,18 @@
-const { Text, Integer, Relationship } = require('@keystonejs/fields');
+const { Text, Integer, Relationship, CloudinaryImage } = require('@keystonejs/fields');
+const { CloudinaryAdapter } = require('@keystonejs/file-adapters');
 
+const cloudinaryAdapter = new CloudinaryAdapter({
+    cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+    apiKey: process.env.CLOUDINARY_KEY,
+    apiSecret: process.env.CLOUDINARY_SECRET,
+    folder: 'images',
+  });
+  
 module.exports = {
     fields: {
     name: { type: Text, isRequired: true },
     category: { type: Relationship, ref: 'Category.items' },
+    image: { type: CloudinaryImage, adapter: cloudinaryAdapter },
     text: { type: Text },
     additionalText: { type: Text },
     respawnTimer: { type: Text },
