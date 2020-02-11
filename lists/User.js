@@ -27,12 +27,12 @@ module.exports = {
       type: Password,
     },
   },
-  /*To create an initial user you can temporarily remove access controls
+  //To create an initial user you can temporarily remove access controls
   access: {
     read: access.userIsAdminOrOwner,
     update: access.userIsAdminOrOwner,
     create: access.userIsAdmin,
     delete: access.userIsAdmin,
     auth: true,
-  },*/
+  },
 };

@@ -2,8 +2,8 @@ const { Keystone } = require('@keystonejs/keystone');
 const { GraphQLApp } = require('@keystonejs/app-graphql');
 const { AdminUIApp } = require('@keystonejs/app-admin-ui');
 const { MongooseAdapter: Adapter } = require('@keystonejs/adapter-mongoose');
-//require('dotenv').config();
-//const { PasswordAuthStrategy } = require('@keystonejs/auth-password');
+require('dotenv').config();
+const { PasswordAuthStrategy } = require('@keystonejs/auth-password');
 const PROJECT_NAME = "rustapedia";
 const UserSchema = require('./lists/User.js');
 const ItemSchema = require('./lists/Item.js');
@@ -19,6 +19,7 @@ const DurabilityInfoSchema = require('./lists/DurabilityInfo.js');
 const CookingInfoSchema = require('./lists/CookingInfo.js');
 const IngredientInfoSchema = require('./lists/IngredientInfo.js');
 const GatheringInfoSchema = require('./lists/GatheringInfo.js');
+const DamageInfoSchema = require('./lists/DamageInfo.js');
 
 /**
  * You've got a new KeystoneJS Project! Things you might want to do next:
@@ -45,13 +46,14 @@ keystone.createList('DurabilityInfo', DurabilityInfoSchema);
 keystone.createList('CookingInfo', CookingInfoSchema);
 keystone.createList('IngredientInfo', IngredientInfoSchema);
 keystone.createList('GatheringInfo', GatheringInfoSchema);
-/*
+keystone.createList('DamageInfo', DamageInfoSchema);
+
 const authStrategy = keystone.createAuthStrategy({
   type: PasswordAuthStrategy,
   list: 'User',
-});*/
+});
 
 module.exports = {
   keystone,
-  apps: [new GraphQLApp(), new AdminUIApp({ enableDefaultRoute: true })],
+  apps: [new GraphQLApp(), new AdminUIApp({ enableDefaultRoute: true, authStrategy })],
 };
