@@ -16,7 +16,7 @@ module.exports = {
     text: { type: Text },
     additionalText: { type: Text },
     respawnTimer: { type: Text },
-    decay: { type: Integer },
+    decay: { type: Text },
     hp: { type: Integer },
     workBench: { type: Relationship, ref: 'Item' },
     blueprint: { type: Text },
