@@ -1,9 +1,9 @@
-const { Text, Relationship } = require('@keystonejs/fields');
+const { Text, Relationship, Select } = require('@keystonejs/fields');
 
 module.exports = {
   fields: {
-  name: { type: Text },
-  items: { type: Relationship, ref: 'Item.category', many: true },
+  name: { type: Select, options: 'Items, Environment' },
+  subCategory: { type: Relationship, ref: 'SubCategory.category', many: true },
   }
 };
   

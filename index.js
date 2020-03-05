@@ -7,7 +7,7 @@ const { PasswordAuthStrategy } = require('@keystonejs/auth-password');
 const PROJECT_NAME = "rustapedia";
 const UserSchema = require('./lists/User.js');
 const ItemSchema = require('./lists/Item.js');
-const CategorySchema = require('./lists/Category.js');
+const SubCategorySchema = require('./lists/SubCategory.js');
 const LootInfoSchema = require('./lists/LootInfo.js');
 const MainInfoSchema = require('./lists/MainInfo.js');
 const WeaponInfoSchema = require('./lists/WeaponInfo.js');
@@ -20,6 +20,7 @@ const CookingInfoSchema = require('./lists/CookingInfo.js');
 const IngredientInfoSchema = require('./lists/IngredientInfo.js');
 const GatheringInfoSchema = require('./lists/GatheringInfo.js');
 const DamageInfoSchema = require('./lists/DamageInfo.js');
+const CategorySchema = require('./lists/Category.js');
 
 /**
  * You've got a new KeystoneJS Project! Things you might want to do next:
@@ -34,7 +35,7 @@ const keystone = new Keystone({
 
 keystone.createList('User', UserSchema);
 keystone.createList('Item', ItemSchema);
-keystone.createList('Category', CategorySchema);
+keystone.createList('SubCategory', SubCategorySchema);
 keystone.createList('LootInfo', LootInfoSchema);
 keystone.createList('MainInfo', MainInfoSchema);
 keystone.createList('FoodInfo', FoodInfoSchema);
@@ -47,6 +48,7 @@ keystone.createList('CookingInfo', CookingInfoSchema);
 keystone.createList('IngredientInfo', IngredientInfoSchema);
 keystone.createList('GatheringInfo', GatheringInfoSchema);
 keystone.createList('DamageInfo', DamageInfoSchema);
+keystone.createList('Category', CategorySchema);
 
 const authStrategy = keystone.createAuthStrategy({
   type: PasswordAuthStrategy,
