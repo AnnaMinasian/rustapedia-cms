@@ -29,9 +29,10 @@ module.exports = {
     experimentation: { type: Relationship, ref: 'Experiment.workBench', many: true },
     research: { type: Relationship, ref: 'ResearchInfo.item' },
     researches: { type: Relationship, ref: 'ResearchInfo.researchTool', many: true }, 
-
-    repairInfo: { type: Relationship, ref: 'Repair.item', many: true },
+    repair: { type: Relationship, ref: 'Repair.item', many: true },
     repairs: { type: Relationship, ref: 'Repair.tool', many: true },
+
+
     recycleResult: { type: Relationship, ref: 'ItemCount', many: true },
     durabilityInfo: { type: Relationship, ref: 'DurabilityInfo', many: true },
     cookingInfo: { type: Relationship, ref: 'CookingInfo', many: true },
