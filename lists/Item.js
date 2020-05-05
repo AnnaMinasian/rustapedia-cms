@@ -25,6 +25,7 @@ module.exports = {
     loot: { type: Relationship, ref:'LootInfo.container', many: true },
     craftInfo: { type: Relationship, ref: 'Craft.item' },
     usedForCraft: { type: Relationship, ref: 'Craft.workBench', many: true },
+    ingredientFor: { type: Relationship, ref: 'Craft.ingredients', many: true },
     experiment: { type: Relationship, ref: 'Experiment.item' },
     experimentation: { type: Relationship, ref: 'Experiment.workBench', many: true },
     research: { type: Relationship, ref: 'ResearchInfo.item' },
