@@ -35,6 +35,10 @@ const ItemInfoSchema = require('./lists/ItemInfo.js');
 const keystone = new Keystone({
   name: PROJECT_NAME,
   adapter: new Adapter(),
+  cookie: {
+    secure: true,
+  },
+  cookieSecret: 'b00391c3-ff5a-48fa-9d56-de351055c7d1'
 });
 
 keystone.createList('User', UserSchema);
@@ -67,4 +71,7 @@ const authStrategy = keystone.createAuthStrategy({
 module.exports = {
   keystone,
   apps: [new GraphQLApp(), new AdminUIApp({ enableDefaultRoute: true, authStrategy })],
+  configureExpress: app => {
+    app.set('trust proxy', 1);
+  }
 };
