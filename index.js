@@ -38,9 +38,8 @@ const keystone = new Keystone({
   cookie: {
     secure: true,
   },
-  cookieSecret: 'b00391c3-ff5a-48fa-9d56-de351055c7d1'
+  cookieSecret: process.env.COOKIE_SECRET
 });
-
 keystone.createList('User', UserSchema);
 keystone.createList('Item', ItemSchema);
 keystone.createList('SubCategory', SubCategorySchema);
