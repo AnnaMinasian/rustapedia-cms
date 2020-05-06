@@ -4,6 +4,7 @@ module.exports = {
   fields: {
     yield: { type: Relationship, ref: 'ItemCount', many: true },
     item: { type: Relationship, ref: 'Item.recycle' },
-    recycler: { type: Relationship, ref: 'Item.recycler' }
+    recycler: { type: Relationship, ref: 'Item.recycler' },
+    recycledFrom: { type: Relationship, ref: 'Item.recycledFrom', many: true },
   }
 };

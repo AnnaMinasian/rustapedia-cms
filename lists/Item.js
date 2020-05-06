@@ -33,6 +33,7 @@ module.exports = {
     repair: { type: Relationship, ref: 'Repair.item', many: true },
     repairs: { type: Relationship, ref: 'Repair.tool', many: true },
     recycle: { type: Relationship, ref: 'Recycle.item' },
+    recycledFrom: { type: Relationship, ref: 'Recycle.recycledFrom', many: true },
     recycler: { type: Relationship, ref: 'Recycle.recycler', many: true },
     durabilityInfo: { type: Relationship, ref: 'DurabilityInfo', many: true },
     
