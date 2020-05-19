@@ -23,6 +23,7 @@
     "@keystonejs/fields": "^6.1.0",
     "@keystonejs/file-adapters": "^5.4.0",
     "@keystonejs/keystone": "^5.0.0",
+    "minimist": ">=1.2.3",
     "cross-env": "^5.2.0",
     "dotenv": "^8.2.0"
   }
