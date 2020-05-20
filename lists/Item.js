@@ -55,6 +55,7 @@ module.exports = {
     cookingInfo: { type: Relationship, ref: "CookingInfo", many: true },
     composter: { type: Relationship, ref: "Compostable.tool", many: true },
     compostable: { type: Relationship, ref: "Compostable.item" },
+    composting: { type: Relationship, ref: "Compostable.composting",  many: true  },
     gatheringInfo: { type: Relationship, ref: "GatheringInfo", many: true },
     damageInfo: { type: Relationship, ref: "DamageInfo", many: true },
   },
