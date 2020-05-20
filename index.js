@@ -25,6 +25,7 @@ const GatheringInfoSchema = require("./lists/GatheringInfo.js");
 const DamageInfoSchema = require("./lists/DamageInfo.js");
 const CategorySchema = require("./lists/Category.js");
 const ItemInfoSchema = require("./lists/ItemInfo.js");
+const CompostableSchema = require("./lists/Compostable.js");
 
 /**
  * You've got a new KeystoneJS Project! Things you might want to do next:
@@ -60,6 +61,7 @@ keystone.createList("GatheringInfo", GatheringInfoSchema);
 keystone.createList("DamageInfo", DamageInfoSchema);
 keystone.createList("Category", CategorySchema);
 keystone.createList("ItemInfo", ItemInfoSchema);
+keystone.createList("Compostable", CompostableSchema);
 
 const authStrategy = keystone.createAuthStrategy({
   type: PasswordAuthStrategy,
