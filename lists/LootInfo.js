@@ -5,7 +5,7 @@ module.exports = {
     container: { type: Relationship, ref: 'Item.loot' },
     itemToLoot: { type: Relationship, ref: 'Item.lootInfo' },
     condition: { type: Text },
-    count: { type: Integer },
+    count: { type: Text },
     chance: { type: Float },
   }
 };
