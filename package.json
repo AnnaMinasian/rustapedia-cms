@@ -8,7 +8,7 @@
   "homepage": "https://github.com/keystonejs/keystone",
   "license": "MIT",
   "engines": {
-    "node": "12.16.x"
+    "node": ">=8.4.0"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development DISABLE_LOGGING=true keystone dev",
@@ -23,7 +23,6 @@
     "@keystonejs/fields": "^6.1.0",
     "@keystonejs/file-adapters": "^5.4.0",
     "@keystonejs/keystone": "^5.0.0",
-    "minimist": ">=1.2.3",
     "cross-env": "^5.2.0",
     "dotenv": "^8.2.0"
   }
