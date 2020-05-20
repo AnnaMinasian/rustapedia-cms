@@ -3,8 +3,7 @@ const { Integer, Relationship, Float } = require('@keystonejs/fields');
 module.exports = {
   fields: {
     item: { type: Relationship, ref: 'Item' },
-    count: { type: Integer },
+    count: { type: Float },
     percent: { type: Integer },
-    float: { type: Float },
   }
 };
