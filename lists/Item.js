@@ -53,7 +53,7 @@ module.exports = {
     recycler: { type: Relationship, ref: "Recycle.recycler", many: true },
     durabilityInfo: { type: Relationship, ref: "DurabilityInfo", many: true },
     cookingInfo: { type: Relationship, ref: "CookingInfo.item", many: true },
-    coocking: { type: Relationship, ref: "CookingInfo.furnace", many: true },
+    cooking: { type: Relationship, ref: "CookingInfo.furnace", many: true },
     composter: { type: Relationship, ref: "Compostable.tool", many: true },
     compostable: { type: Relationship, ref: "Compostable.item" },
     composting: { type: Relationship, ref: "Compostable.composting",  many: true  },
