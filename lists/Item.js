@@ -65,7 +65,7 @@ module.exports = {
     },
     gatheredFrom: {
       type: Relationship,
-      ref: "GatheringInfo.resource",
+      ref: "Item",
       many: true,
     },
     damageInfo: { type: Relationship, ref: "DamageInfo", many: true },
