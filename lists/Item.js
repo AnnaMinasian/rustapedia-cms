@@ -1,8 +1,4 @@
-const {
-  Text,
-  Relationship,
-  CloudinaryImage,
-} = require("@keystonejs/fields");
+const { Text, Relationship, CloudinaryImage } = require("@keystonejs/fields");
 const { CloudinaryAdapter } = require("@keystonejs/file-adapters");
 
 const cloudinaryAdapter = new CloudinaryAdapter({
@@ -56,8 +52,22 @@ module.exports = {
     cooking: { type: Relationship, ref: "CookingInfo.furnace", many: true },
     composter: { type: Relationship, ref: "Compostable.tool", many: true },
     compostable: { type: Relationship, ref: "Compostable.item" },
-    composting: { type: Relationship, ref: "Compostable.composting",  many: true  },
-    gatheringInfo: { type: Relationship, ref: "GatheringInfo", many: true },
+    composting: {
+      type: Relationship,
+      ref: "Compostable.composting",
+      many: true,
+    },
+    gather: { type: Relationship, ref: "GatheringInfo.tool", many: true },
+    gatheringInfo: {
+      type: Relationship,
+      ref: "GatheringInfo.fromItem",
+      many: true,
+    },
+    gatheredFrom: {
+      type: Relationship,
+      ref: "GatheringInfo.resource",
+      many: true,
+    },
     damageInfo: { type: Relationship, ref: "DamageInfo", many: true },
   },
 };
