@@ -32,6 +32,12 @@ module.exports = {
       ref: "Experiment.workBench",
       many: true,
     },
+    equipment: { type: Relationship, ref: "EquipmentInfo.animal", many: true },
+    equipmentFor: { type: Relationship, ref: "EquipmentInfo.item"},
+    breeds: { type: Relationship, ref: "BreedsInfo", many: true },
+    feeding: { type: Relationship, ref: "FeedingInfo", many: true },
+    produces: { type: Relationship, ref: "ProduceInfo.animal" },
+    productOf: { type: Relationship, ref: "ProduceInfo.item" },
     research: { type: Relationship, ref: "ResearchInfo.item" },
     researches: {
       type: Relationship,

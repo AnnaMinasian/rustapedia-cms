@@ -26,6 +26,10 @@ const DamageInfoSchema = require("./lists/DamageInfo.js");
 const CategorySchema = require("./lists/Category.js");
 const ItemInfoSchema = require("./lists/ItemInfo.js");
 const CompostableSchema = require("./lists/Compostable.js");
+const EquipmentInfoSchema = require("./lists/EquipmentInfo.js");
+const BreedsInfoSchema = require("./lists/BreedsInfo.js");
+const FeedingInfoSchema = require("./lists/FeedingInfo.js");
+const ProduceInfoSchema = require("./lists/ProduceInfo.js");
 
 /**
  * You've got a new KeystoneJS Project! Things you might want to do next:
@@ -62,6 +66,11 @@ keystone.createList("DamageInfo", DamageInfoSchema);
 keystone.createList("Category", CategorySchema);
 keystone.createList("ItemInfo", ItemInfoSchema);
 keystone.createList("Compostable", CompostableSchema);
+keystone.createList("EquipmentInfo", EquipmentInfoSchema);
+keystone.createList("BreedsInfo", BreedsInfoSchema);
+keystone.createList("FeedingInfo", FeedingInfoSchema);
+keystone.createList("ProduceInfo", ProduceInfoSchema);
+
 
 const authStrategy = keystone.createAuthStrategy({
   type: PasswordAuthStrategy,
