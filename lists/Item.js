@@ -12,7 +12,7 @@ module.exports = {
   fields: {
     category: { type: Relationship, ref: "Category" },
     subCategory: { type: Relationship, ref: "SubCategory.items" },
-    name: { type: Text, isRequired: true },
+    name: { type: Text, isRequired: true, isUnique: true },
     image: { type: CloudinaryImage, adapter: cloudinaryAdapter },
     text: { type: Text },
     additionalText: { type: Text },
