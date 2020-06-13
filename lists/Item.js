@@ -33,7 +33,7 @@ module.exports = {
       many: true,
     },
     equipment: { type: Relationship, ref: "EquipmentInfo.animal", many: true },
-    equipmentFor: { type: Relationship, ref: "EquipmentInfo.item"},
+    equipmentFor: { type: Relationship, ref: "EquipmentInfo.item" },
     breeds: { type: Relationship, ref: "BreedsInfo", many: true },
     feeding: { type: Relationship, ref: "FeedingInfo", many: true },
     produces: { type: Relationship, ref: "ProduceInfo.animal" },
@@ -75,5 +75,7 @@ module.exports = {
       many: true,
     },
     damageInfo: { type: Relationship, ref: "DamageInfo", many: true },
+    drops: { type: Relationship, ref: "DropInfo.vehicle" },
+    droppedBy: { type: Relationship, ref: "DropInfo.crate" },
   },
 };
