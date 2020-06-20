@@ -77,5 +77,7 @@ module.exports = {
     damageInfo: { type: Relationship, ref: "DamageInfo", many: true },
     drops: { type: Relationship, ref: "DropInfo.vehicle" },
     droppedBy: { type: Relationship, ref: "DropInfo.crate" },
+    collectible: { type: Relationship, ref: "CollectInfo.collectedFrom" },
+    collected: { type: Relationship, ref: "CollectInfo.collectible" },
   },
 };
