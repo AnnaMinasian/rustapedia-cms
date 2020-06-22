@@ -79,5 +79,11 @@ module.exports = {
     droppedBy: { type: Relationship, ref: "DropInfo.crate" },
     collectible: { type: Relationship, ref: "CollectInfo.collectedFrom" },
     collected: { type: Relationship, ref: "CollectInfo.collectible" },
+    yields: { type: Relationship, ref: "YieldsInfo.monument", many: true },
+    extractedBy: {
+      type: Relationship,
+      ref: "YieldsInfo.resources",
+      many: true,
+    },
   },
 };
