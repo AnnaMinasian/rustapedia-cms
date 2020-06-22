@@ -6,7 +6,7 @@ module.exports = {
     resources: { type: Relationship, ref: "Item.extractedBy", many: true },
     amount: { type: Integer },
     time: { type: Text },
-    fuel: { type: Integer },
+    fuel: { type: Relationship, ref: "ItemCount" },
     amountPerMinute: { type: Integer },
     type: { type: Text },
     resourcesPerHour: { type: Relationship, ref: "ItemCount", many: true },
