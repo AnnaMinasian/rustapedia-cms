@@ -86,5 +86,7 @@ module.exports = {
       ref: "YieldsInfo.resources",
       many: true,
     },
+    fueledBy: { type: Relationship, ref: "FuelInfo.object", many: true },
+    fuelFor: { type: Relationship, ref: "FuelInfo.fuel", many: true },
   },
 };
