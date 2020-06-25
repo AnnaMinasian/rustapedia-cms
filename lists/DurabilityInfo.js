@@ -2,7 +2,7 @@ const { Text, Integer, Relationship, Select } = require("@keystonejs/fields");
 
 module.exports = {
   fields: {
-    type: { type: Select, options: "Explosive, Melle, Guns, Throwing" },
+    type: { type: Select, options: "Explosive, Melle, Guns, Throwing, SAM" },
     item: { type: Relationship, ref: "Item" },
     ammo: { type: Relationship, ref: "Item" },
     weapon: { type: Relationship, ref: "Item" },
