@@ -10,6 +10,6 @@ module.exports = {
     time: { type: Text },
     fuelNeeded: { type: Integer },
     sulfurNeeded: { type: Integer },
-    quantity: { type: Integer },
+    quantity: { type: Text },
   },
 };
