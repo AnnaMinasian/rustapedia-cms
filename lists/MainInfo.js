@@ -1,4 +1,4 @@
-const { Integer, Text } = require('@keystonejs/fields');
+const { Integer, Text } = require("@keystonejs/fields");
 
 module.exports = {
   fields: {
@@ -7,5 +7,7 @@ module.exports = {
     despawnTime: { type: Integer },
     hp: { type: Integer },
     stamina: { type: Text },
-  }
+    mainRotorHP: { type: Integer },
+    tailRotorHP: { type: Integer },
+  },
 };
