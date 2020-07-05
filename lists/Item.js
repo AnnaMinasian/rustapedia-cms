@@ -88,5 +88,6 @@ module.exports = {
     },
     fueledBy: { type: Relationship, ref: "FuelInfo.object", many: true },
     fuelFor: { type: Relationship, ref: "FuelInfo.fuel", many: true },
+    shopping: { type: Relationship, ref: "Shopping.item", many: true },
   },
 };
