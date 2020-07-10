@@ -1,21 +1,21 @@
-const { Float, Integer, Text, Select } = require('@keystonejs/fields');
+const { Float, Float, Text, Select } = require("@keystonejs/fields");
 
 module.exports = {
   fields: {
-    damage: { type: Integer },
-    attackSpeed: { type: Integer },
+    damage: { type: Float },
+    attackSpeed: { type: Float },
     range: { type: Float },
-    rateOfFire: { type: Integer },
+    rateOfFire: { type: Float },
     aimCone: { type: Float },
-    capacity: { type: Integer },
+    capacity: { type: Float },
     reload: { type: Float },
-    draw: { type: Integer },
-    throw: { type: Select, options: 'Yes, No' },
-    hipAimcone: { type: Integer },
-    velocity: { type: Integer },
-    recoil: { type: Integer },
+    draw: { type: Float },
+    throw: { type: Select, options: "Yes, No" },
+    hipAimcone: { type: Float },
+    velocity: { type: Float },
+    recoil: { type: Float },
     exposionRadius: { type: Text },
     explosionDelay: { type: Text },
     dugChance: { type: Text },
-  }
+  },
 };
