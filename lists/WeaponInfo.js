@@ -1,4 +1,4 @@
-const { Float, Float, Text, Select } = require("@keystonejs/fields");
+const { Float, Text, Select } = require("@keystonejs/fields");
 
 module.exports = {
   fields: {
