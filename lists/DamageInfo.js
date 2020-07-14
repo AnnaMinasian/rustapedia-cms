@@ -8,6 +8,7 @@ module.exports = {
     dps: { type: Float },
     headShot: { type: Float },
     aimCone: { type: Float },
+    spread: { type: Float },
     velocity: { type: Float },
   },
 };
