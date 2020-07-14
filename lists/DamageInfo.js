@@ -2,8 +2,9 @@ const { Select, Relationship, Float, Text } = require("@keystonejs/fields");
 
 module.exports = {
   fields: {
-    attack: { type: Select, options: "Melee, Torch Ignited, Throw" },
+    weapon: { type: Relationship, ref: "Item.damageInfo" },
     ammunition: { type: Relationship, ref: "Item.ammoFor" },
+    attack: { type: Select, options: "Melee, Torch Ignited, Throw" },
     damage: { type: Text },
     dps: { type: Float },
     headShot: { type: Float },
