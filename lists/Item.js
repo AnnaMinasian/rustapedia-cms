@@ -21,6 +21,7 @@ module.exports = {
     mainInfo: { type: Relationship, ref: "MainInfo" },
     weaponInfo: { type: Relationship, ref: "WeaponInfo" },
     foodInfo: { type: Relationship, ref: "FoodInfo" },
+    attireInfo: { type: Relationship, ref: "AttireInfo" },
     lootInfo: { type: Relationship, ref: "LootInfo.itemToLoot", many: true },
     loot: { type: Relationship, ref: "LootInfo.container", many: true },
     craftInfo: { type: Relationship, ref: "Craft.item" },

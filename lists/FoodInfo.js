@@ -1,4 +1,4 @@
-const { Integer, Text } = require('@keystonejs/fields');
+const { Integer, Text } = require("@keystonejs/fields");
 
 module.exports = {
   fields: {
@@ -7,5 +7,5 @@ module.exports = {
     health: { type: Text },
     healthOverTime: { type: Text },
     capacity: { type: Integer },
-  }
+  },
 };

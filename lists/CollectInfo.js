@@ -1,4 +1,4 @@
-const { Relationship, Select } = require("@keystonejs/fields");
+const { Relationship } = require("@keystonejs/fields");
 
 module.exports = {
   fields: {
