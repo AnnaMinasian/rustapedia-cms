@@ -1,8 +1,8 @@
-const { Integer, Text } = require("@keystonejs/fields");
+const { Integer, Text, Float } = require("@keystonejs/fields");
 
 module.exports = {
   fields: {
-    identifier: { type: Text },
+    identifier: { type: Float },
     stackSize: { type: Integer },
     despawnTime: { type: Integer },
     hp: { type: Integer },

@@ -35,6 +35,7 @@ const CollectInfoSchema = require("./lists/CollectInfo.js");
 const YieldsInfoSchema = require("./lists/YieldsInfo.js");
 const FuelInfoSchema = require("./lists/FuelInfo.js");
 const ShoppingSchema = require("./lists/Shopping.js");
+const ModsInfoSchema = require("./lists/ModsInfo.js");
 
 /**
  * You've got a new KeystoneJS Project! Things you might want to do next:
@@ -80,6 +81,7 @@ keystone.createList("CollectInfo", CollectInfoSchema);
 keystone.createList("YieldsInfo", YieldsInfoSchema);
 keystone.createList("FuelInfo", FuelInfoSchema);
 keystone.createList("Shopping", ShoppingSchema);
+keystone.createList("ModsInfo", ModsInfoSchema);
 
 const authStrategy = keystone.createAuthStrategy({
   type: PasswordAuthStrategy,
