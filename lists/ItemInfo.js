@@ -8,5 +8,6 @@ module.exports = {
     decayTimeInside: { type: Integer },
     upkeep: { type: Integer },
     speed: { type: Text },
+    capacity: { type: Integer },
   },
 };
