@@ -1,11 +1,11 @@
-const { Integer, Text } = require("@keystonejs/fields");
+const { Integer, Float } = require("@keystonejs/fields");
 
 module.exports = {
   fields: {
-    calories: { type: Text },
-    hydration: { type: Text },
-    health: { type: Text },
-    healthOverTime: { type: Text },
+    calories: { type: Float },
+    hydration: { type: Float },
+    health: { type: Float },
+    healthOverTime: { type: Float },
     capacity: { type: Integer },
   },
 };
