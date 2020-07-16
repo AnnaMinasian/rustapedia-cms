@@ -1,9 +1,9 @@
-const { Relationship, Integer } = require('@keystonejs/fields');
+const { Relationship, Float } = require("@keystonejs/fields");
 
 module.exports = {
   fields: {
-    cookingItem: { type: Relationship, ref: 'Item' },
-    needed: { type: Relationship, ref: 'Item' },
-    count: { type: Integer }
-  }
+    cookingItem: { type: Relationship, ref: "Item" },
+    needed: { type: Relationship, ref: "Item" },
+    count: { type: Float },
+  },
 };
