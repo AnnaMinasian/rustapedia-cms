@@ -37,8 +37,8 @@ module.exports = {
     equipmentFor: { type: Relationship, ref: "EquipmentInfo.item" },
     breeds: { type: Relationship, ref: "BreedsInfo", many: true },
     feeding: { type: Relationship, ref: "FeedingInfo", many: true },
-    produces: { type: Relationship, ref: "ProduceInfo.animal" },
-    productOf: { type: Relationship, ref: "ProduceInfo.item" },
+    produces: { type: Relationship, ref: "ProduceInfo.animal", many: true },
+    productOf: { type: Relationship, ref: "ProduceInfo.item", many: true },
     research: { type: Relationship, ref: "ResearchInfo.item" },
     researches: {
       type: Relationship,
