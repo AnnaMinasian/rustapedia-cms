@@ -92,5 +92,7 @@ module.exports = {
     shopping: { type: Relationship, ref: "Shopping.item", many: true },
     modsInfo: { type: Relationship, ref: "ModsInfo.weapon", many: true },
     modsFor: { type: Relationship, ref: "ModsInfo.modification", many: true },
+    caughtBy: { type: Relationship, ref: "FishingInfo.catch", many: true },
+    fishing: { type: Relationship, ref: "FishingInfo.trap", many: true },
   },
 };
