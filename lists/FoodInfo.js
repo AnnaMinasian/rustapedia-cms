@@ -8,6 +8,6 @@ module.exports = {
     healthOverTime: { type: Float },
     capacity: { type: Integer },
     radiation: { type: Float },
-    bleading: { type: Float },
+    bleeding: { type: Float },
   },
 };
