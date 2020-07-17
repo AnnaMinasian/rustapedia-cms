@@ -7,5 +7,7 @@ module.exports = {
     health: { type: Float },
     healthOverTime: { type: Float },
     capacity: { type: Integer },
+    radiation: { type: Float },
+    bleading: { type: Float },
   },
 };
