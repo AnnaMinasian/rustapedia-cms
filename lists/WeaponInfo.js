@@ -2,10 +2,10 @@ const { Float, Text, Select } = require("@keystonejs/fields");
 
 module.exports = {
   fields: {
-    damage: { type: Float },
+    damage: { type: Text },
     attackSpeed: { type: Float },
     range: { type: Float },
-    rateOfFire: { type: Float },
+    rateOfFire: { type: Text },
     aimCone: { type: Float },
     aimConePercent: { type: Float },
     capacity: { type: Float },

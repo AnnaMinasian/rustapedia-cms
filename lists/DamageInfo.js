@@ -6,10 +6,10 @@ module.exports = {
     ammunition: { type: Relationship, ref: "Item.ammoFor" },
     attack: { type: Select, options: "Melee, Torch Ignited, Throw" },
     damage: { type: Text },
-    dps: { type: Float },
+    dps: { type: Text },
     headShot: { type: Float },
     aimCone: { type: Float },
     spread: { type: Float },
-    velocity: { type: Float },
+    velocity: { type: Text },
   },
 };
