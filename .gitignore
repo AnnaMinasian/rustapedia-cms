@@ -3,6 +3,7 @@
 coverage
 build
 node_modules
+images
 stats.json
 
 # Cruft
