@@ -1,4 +1,9 @@
-const { Text, Relationship, CloudinaryImage } = require("@keystonejs/fields");
+const {
+  Text,
+  Relationship,
+  CloudinaryImage,
+  Checkbox,
+} = require("@keystonejs/fields");
 const { CloudinaryAdapter } = require("@keystonejs/file-adapters");
 
 const cloudinaryAdapter = new CloudinaryAdapter({
@@ -17,6 +22,7 @@ module.exports = {
     text: { type: Text },
     additionalText: { type: Text },
     blueprint: { type: Text },
+    defaultKnow: { type: Checkbox },
     itemInfo: { type: Relationship, ref: "ItemInfo" },
     mainInfo: { type: Relationship, ref: "MainInfo" },
     weaponInfo: { type: Relationship, ref: "WeaponInfo" },
