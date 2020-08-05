@@ -23,6 +23,7 @@ module.exports = {
     additionalText: { type: Text },
     blueprint: { type: Text },
     defaultKnow: { type: Checkbox },
+    steamItem: { type: Checkbox },
     itemInfo: { type: Relationship, ref: "ItemInfo" },
     mainInfo: { type: Relationship, ref: "MainInfo" },
     weaponInfo: { type: Relationship, ref: "WeaponInfo" },
