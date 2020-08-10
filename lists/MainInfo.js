@@ -17,5 +17,9 @@ module.exports = {
     stamina: { type: Text },
     mainRotorHP: { type: Integer },
     tailRotorHP: { type: Integer },
+    generatesEnergy: { type: Text },
+    consumption: { type: Integer },
+    outputs: { type: Text },
+    imputs: { type: Text },
   },
 };
