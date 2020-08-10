@@ -20,6 +20,6 @@ module.exports = {
     generatesEnergy: { type: Text },
     consumption: { type: Integer },
     outputs: { type: Text },
-    imputs: { type: Text },
+    inputs: { type: Text },
   },
 };
