@@ -1,21 +1,14 @@
-const { Text, Checkbox, Password } = require('@keystonejs/fields');
-
-// Access control functions
-const userIsAdmin = ({ authentication: { item: user } }) => Boolean(user && user.isAdmin);
-const userOwnsItem = ({ authentication: { item: user } }) => {
-  if (!user) {
-    return false;
-  }
-  return { id: user.id };
-};
-const userIsAdminOrOwner = auth => {
-  const isAdmin = access.userIsAdmin(auth);
-  const isOwner = access.userOwnsItem(auth);
-  return isAdmin ? isAdmin : isOwner;
-};
-const access = { userIsAdmin, userOwnsItem, userIsAdminOrOwner };
+const { Text, Checkbox, Password } = require("@keystonejs/fields");
+const { access } = require("../access.js");
 
 module.exports = {
+  access: {
+    read: access.userIsAdminOrOwner,
+    update: access.userIsAdminOrOwner,
+    create: access.userIsAdmin,
+    delete: access.userIsAdmin,
+    auth: true,
+  },
   fields: {
     name: { type: Text },
     email: {
@@ -26,13 +19,5 @@ module.exports = {
     password: {
       type: Password,
     },
-  },
-  //To create an initial user you can temporarily remove access controls
-  access: {
-    read: access.userIsAdminOrOwner,
-    update: access.userIsAdminOrOwner,
-    create: access.userIsAdmin,
-    delete: access.userIsAdmin,
-    auth: true,
   },
 };

@@ -53,6 +53,12 @@ const keystone = new Keystone({
   },
   cookieSecret: process.env.COOKIE_SECRET,
 });
+
+const authStrategy = keystone.createAuthStrategy({
+  type: PasswordAuthStrategy,
+  list: "User",
+});
+
 keystone.createList("User", UserSchema);
 keystone.createList("Item", ItemSchema);
 keystone.createList("SubCategory", SubCategorySchema);
@@ -86,11 +92,6 @@ keystone.createList("Shopping", ShoppingSchema);
 keystone.createList("ModsInfo", ModsInfoSchema);
 keystone.createList("AttireInfo", AttireInfoSchema);
 keystone.createList("FishingInfo", FishingInfoSchema);
-
-const authStrategy = keystone.createAuthStrategy({
-  type: PasswordAuthStrategy,
-  list: "User",
-});
 
 module.exports = {
   keystone,

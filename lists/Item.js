@@ -5,6 +5,7 @@ const {
   Checkbox,
 } = require("@keystonejs/fields");
 const { CloudinaryAdapter } = require("@keystonejs/file-adapters");
+const { access } = require("../access.js");
 
 const cloudinaryAdapter = new CloudinaryAdapter({
   cloudName: process.env.CLOUDINARY_CLOUD_NAME,
@@ -14,6 +15,13 @@ const cloudinaryAdapter = new CloudinaryAdapter({
 });
 
 module.exports = {
+  access: {
+    read: true,
+    update: access.userIsAdminOrOwner,
+    create: access.userIsAdmin,
+    delete: access.userIsAdmin,
+    auth: true,
+  },
   fields: {
     category: { type: Relationship, ref: "Category" },
     subCategory: { type: Relationship, ref: "SubCategory.items" },
